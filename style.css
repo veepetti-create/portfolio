@@ -83,13 +83,19 @@ p {
 
 /* --- RESPONSIVE ADJUSTMENTS --- */
 
-/* Medium screens (tablets) */
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
+
+  .column img {
+    width: 80%;   
+    margin: 0 auto;
+    display: block;
+}
 
   nav {
     justify-content: center;
@@ -104,10 +110,15 @@ p {
   }
 }
 
-/* Small screens (phones) */
 @media (max-width: 480px) {
   body {
     padding: 10px;
+  }
+
+  .column img {
+    width: 70%;    
+    margin: 0 auto;
+    display: block;
   }
 
   header h1 {
