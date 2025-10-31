@@ -44,6 +44,16 @@ section {
   border-radius: 8px;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
+.item{
+  display: inline-block;
+    margin-top: 5px;
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+.item:hover {
+  text-decoration: underline;
+}
 
 .row {
   display: flex;
