@@ -45,29 +45,83 @@ section {
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
-.portfolio h4 {
-  margin: 5px;
-}
-.item{
-  display: inline-block;
-    margin-top: 5px;
-    color: #007BFF;
-    text-decoration: none;
-    font-weight: bold;
-}
-.item:hover {
-  text-decoration: underline;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+  margin-top: 10px;
 }
 
 .column {
-  float: left;
-  width: 50%;
-  padding: 5px;
+  flex: 1 1 45%; /* Each takes about half width but can shrink on smaller screens */
+  min-width: 280px;
 }
 
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
+/* Images automatically scale */
+.column img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
-p{width: 100%; text-align: left; font-size: large; }
+
+/* Paragraph text */
+p {
+  width: 100%;
+  text-align: left;
+  font-size: large;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .column {
+    flex: 1 1 100%;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    display: block;
+    text-align: center;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  .item {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
