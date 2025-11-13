@@ -81,13 +81,12 @@ section {
 ul{
   padding-left: 40px;
   padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 p{
   padding-left: 10px;
-  padding-top: 1px;
 }
-
 
 @media (max-width: 768px) {
   header {
@@ -113,10 +112,6 @@ p{
   .column {
     flex: 1 1 100%;
   }
-  ul{
-  padding-left: 30px;
-  padding-top: 10px;
-}
 }
 
 @media (max-width: 480px) {
@@ -152,9 +147,5 @@ p{
     display: block;
     text-align: center;
     margin-top: 10px;
-    ul{
-  padding-left: 20px;
-  padding-top: 50px;
-}
   }
 }
